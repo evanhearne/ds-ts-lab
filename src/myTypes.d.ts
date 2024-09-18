@@ -44,3 +44,7 @@ export type BuddyList = {
   admin: Administrator;
   members: Buddy[];
 }
+
+export type FriendPartial = Partial<Friend>;
+export type EventPass = Omit<Colleague, "contact"> & {passcode: number};
+export type SecureFriendContact = Readonly<Pick<Friend, "name" | "phone">>;
