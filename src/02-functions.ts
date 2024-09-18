@@ -61,3 +61,13 @@ function findFriends(friends: Friend[], filter: (f: Friend) => boolean): String[
 
 console.log(findFriends(friends, (f) => f.name.startsWith("Pa")));
 console.log(findFriends(friends, (f) => f.age < 35));
+
+function addInterest(f: Friend, i: string): string[] {
+    if (f.interests === undefined) {
+        f.interests = []
+    }
+    f.interests.push(i)
+    return f.interests
+}
+
+console.log(addInterest(friends[1], "Politics"));
